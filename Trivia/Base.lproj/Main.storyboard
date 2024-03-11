@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Fnh-Wh-HQL">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Trivia View Controller-->
+        <scene sceneID="kno-UE-n11">
+            <objects>
+                <viewController id="Fnh-Wh-HQL" customClass="TriviaViewController" customModule="Trivia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="37P-Up-IXq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lB-R9-daR">
+                                <rect key="frame" x="21.666666666666657" y="89" width="350" height="250"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="eM0-hE-GqA"/>
+                                    <constraint firstAttribute="height" constant="250" id="m0T-xh-V03"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6Ie-Mh-PzM">
+                                <rect key="frame" x="46.666666666666657" y="359" width="300" height="220"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPd-7o-ddO">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="9fl-wY-gHD"/>
+                                            <constraint firstAttribute="width" constant="300" id="uKU-4X-qFq"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Option1">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapOption1:" destination="Fnh-Wh-HQL" eventType="touchUpInside" id="WzD-rb-tlL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gvq-fn-Yjn">
+                                        <rect key="frame" x="0.0" y="60" width="300" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="8wT-4i-awz"/>
+                                            <constraint firstAttribute="width" constant="300" id="kGz-jH-Ykf"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Option2">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapOption2:" destination="Fnh-Wh-HQL" eventType="touchUpInside" id="a7Y-yC-bR3"/>
+                                            <action selector="option2Button:" destination="Fnh-Wh-HQL" eventType="touchUpInside" id="xXP-So-gmK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ek-ZS-yhB">
+                                        <rect key="frame" x="0.0" y="120" width="300" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="D6T-mP-0pz"/>
+                                            <constraint firstAttribute="width" constant="300" id="hh5-7B-zKg"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Option3">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapOption3:" destination="Fnh-Wh-HQL" eventType="touchUpInside" id="Xdf-wg-bIQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGd-At-BCV">
+                                        <rect key="frame" x="0.0" y="180" width="300" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="RZt-Qy-JvG"/>
+                                            <constraint firstAttribute="width" constant="300" id="ylq-QW-2ZN"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Option4">
+                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="didTapOption4:" destination="Fnh-Wh-HQL" eventType="touchUpInside" id="JB1-4Z-ZjJ"/>
+                                            <action selector="didTapOtion4:" destination="Fnh-Wh-HQL" eventType="touchUpInside" id="YRA-90-uvf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="oqg-KY-lb0"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SDx-XS-dUF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2lB-R9-daR" firstAttribute="top" secondItem="SDx-XS-dUF" secondAttribute="top" constant="30" id="4Sj-cR-34K"/>
+                            <constraint firstItem="6Ie-Mh-PzM" firstAttribute="top" secondItem="2lB-R9-daR" secondAttribute="bottom" constant="20" id="9O4-g1-IuB"/>
+                            <constraint firstItem="6Ie-Mh-PzM" firstAttribute="centerX" secondItem="37P-Up-IXq" secondAttribute="centerX" id="Agq-hL-atS"/>
+                            <constraint firstItem="2lB-R9-daR" firstAttribute="centerX" secondItem="37P-Up-IXq" secondAttribute="centerX" id="pJD-Hu-O44"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="option1Button" destination="hPd-7o-ddO" id="Ppz-8Z-Qkd"/>
+                        <outlet property="option2Button" destination="Gvq-fn-Yjn" id="UJA-XT-b3K"/>
+                        <outlet property="option3Button" destination="0Ek-ZS-yhB" id="5FN-cL-CbV"/>
+                        <outlet property="option4Button" destination="LGd-At-BCV" id="vEx-bV-RO2"/>
+                        <outlet property="questionLabel" destination="2lB-R9-daR" id="B6E-Qi-zCl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ssE-Wa-omW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.74045801526717" y="-28.169014084507044"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
