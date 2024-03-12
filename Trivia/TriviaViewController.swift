@@ -11,6 +11,7 @@ class TriviaViewController: UIViewController {
 
     private var triviaQuestions = [TriviaData]()
     private var selectedtriviaQuestion = 0
+    private var correctAnswers = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,7 @@ class TriviaViewController: UIViewController {
     
     private func configure(with trivia: TriviaData) {
         questionCountLabel.text = ("Question: \(selectedtriviaQuestion+1) / \(triviaQuestions.count)")
+        triviaCategory.text = trivia.TriviaCategory.description
         questionLabel.text = trivia.TriviaCategory.question
         option1Button.setTitle(trivia.TriviaCategory.options[0], for:.normal)
         option2Button.setTitle(trivia.TriviaCategory.options[1], for:.normal)
