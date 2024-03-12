@@ -56,8 +56,7 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="didTapOption2:" destination="Fnh-Wh-HQL" eventType="touchUpInside" id="a7Y-yC-bR3"/>
-                                            <action selector="option2Button:" destination="Fnh-Wh-HQL" eventType="touchUpInside" id="xXP-So-gmK"/>
+                                            <action selector="didTapOption2:" destination="Fnh-Wh-HQL" eventType="touchUpInside" id="MPj-kr-5fO"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ek-ZS-yhB">
@@ -85,8 +84,7 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="didTapOption4:" destination="Fnh-Wh-HQL" eventType="touchUpInside" id="JB1-4Z-ZjJ"/>
-                                            <action selector="didTapOtion4:" destination="Fnh-Wh-HQL" eventType="touchUpInside" id="YRA-90-uvf"/>
+                                            <action selector="didTapOption4:" destination="Fnh-Wh-HQL" eventType="touchUpInside" id="py6-uf-oI3"/>
                                         </connections>
                                     </button>
                                 </subviews>

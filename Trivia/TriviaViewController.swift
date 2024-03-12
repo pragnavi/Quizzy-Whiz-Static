@@ -9,11 +9,22 @@ import UIKit
 
 class TriviaViewController: UIViewController {
 
+    private var triviaQuestions = [TriviaData]()
+    private var selectedtriviaQuestion = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         addGradient()
-        let fakeData = TriviaData(TriviaCategory: .history)
-        configure(with: fakeData)
+        triviaQuestions = createMockData()
+        configure(with: triviaQuestions[selectedtriviaQuestion])
+    }
+    
+    private func createMockData() -> [TriviaData] {
+        let mockData1 = TriviaData(TriviaCategory: .history)
+        let mockData2 = TriviaData(TriviaCategory: .science)
+        let mockData3 = TriviaData(TriviaCategory: .literature)
+        let mockData4 = TriviaData(TriviaCategory: .popCulture)
+        return [mockData1, mockData2, mockData3, mockData4]
     }
     
     private func configure(with trivia: TriviaData) {
@@ -51,17 +62,26 @@ class TriviaViewController: UIViewController {
     
   
     @IBAction func didTapOption1(_ sender: UIButton) {
+        selectedtriviaQuestion = min(triviaQuestions.count - 1, selectedtriviaQuestion + 1)
+        configure(with: triviaQuestions[selectedtriviaQuestion])
     }
     
+    
     @IBAction func didTapOption2(_ sender: UIButton) {
+        selectedtriviaQuestion = min(triviaQuestions.count - 1, selectedtriviaQuestion + 1)
+        configure(with: triviaQuestions[selectedtriviaQuestion])
     }
     
     
     @IBAction func didTapOption3(_ sender: UIButton) {
-    }
-    
-    @IBAction func didTapOtion4(_ sender: UIButton) {
+        selectedtriviaQuestion = min(triviaQuestions.count - 1, selectedtriviaQuestion + 1)
+        configure(with: triviaQuestions[selectedtriviaQuestion])
     }
     
 
+    @IBAction func didTapOption4(_ sender: UIButton) {
+        selectedtriviaQuestion = min(triviaQuestions.count - 1, selectedtriviaQuestion + 1)
+        configure(with: triviaQuestions[selectedtriviaQuestion])
+    }
+    
 }

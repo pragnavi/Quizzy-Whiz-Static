@@ -36,11 +36,11 @@ enum TriviaCategory {
             case .history:
                 return "What is my name?"
             case .science:
-                return "What is my name?"
+                return "is my name?"
             case .literature:
-                return "What is my name?"
+                return "my name?"
             case .popCulture:
-                return "What is my name?"
+                return "name?"
         }
     }
     
