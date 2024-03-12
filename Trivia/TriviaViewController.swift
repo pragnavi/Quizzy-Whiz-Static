@@ -28,6 +28,7 @@ class TriviaViewController: UIViewController {
     }
     
     private func configure(with trivia: TriviaData) {
+        questionCountLabel.text = ("Question: \(selectedtriviaQuestion+1) / \(triviaQuestions.count)")
         questionLabel.text = trivia.TriviaCategory.question
         option1Button.setTitle(trivia.TriviaCategory.options[0], for:.normal)
         option2Button.setTitle(trivia.TriviaCategory.options[1], for:.normal)
@@ -45,6 +46,10 @@ class TriviaViewController: UIViewController {
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
 
+    
+    @IBOutlet weak var questionCountLabel: UILabel!
+    
+    @IBOutlet weak var triviaCategory: UILabel!
     
     @IBOutlet weak var questionLabel: UILabel!
     
