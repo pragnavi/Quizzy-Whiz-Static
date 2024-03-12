@@ -30,9 +30,19 @@ The following **additional** features are implemented:
 
 <div>
     <a href="https://www.loom.com/share/beaa8405c1384d7785c10946ecdadf65">
+          <p>Personal Device</p>
     </a>
     <a href="https://www.loom.com/share/beaa8405c1384d7785c10946ecdadf65">
       <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/beaa8405c1384d7785c10946ecdadf65-with-play.gif">
+    </a>
+  </div>
+  
+  <div>
+    <a href="https://www.loom.com/share/7f5f5ae34afd4d70a8cb083c5f39a2d7">
+      <p>Simulation: Multiple Device Sizes</p>
+    </a>
+    <a href="https://www.loom.com/share/7f5f5ae34afd4d70a8cb083c5f39a2d7">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/7f5f5ae34afd4d70a8cb083c5f39a2d7-with-play.gif">
     </a>
   </div>
   
