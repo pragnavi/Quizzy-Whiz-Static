@@ -34,39 +34,39 @@ enum TriviaCategory {
     var question: String {
         switch self {
             case .history:
-                return "What is my name?"
+                return "Who was the first President of the United States?"
             case .science:
-                return "is my name?"
+                return "What is the hardest natural substance on Earth?"
             case .literature:
-                return "my name?"
+                return "Who wrote the novel '1984'?"
             case .popCulture:
-                return "name?"
+                return "Which album did Taylor Swift release in 2020?"
         }
     }
     
     var options: [String] {
         switch self {
             case .history:
-                return ["Pragnavi", "John", "Katy", "Perry"]
+                return ["Thomas Jefferson", "Abraham Lincoln", "George Washington", "John Adams"]
             case .science:
-                return ["Pragnavi", "John", "Katy", "Perry"]
+                return ["Gold", "Diamond", "Quartz", "Iron"]
             case .literature:
-                return ["Pragnavi", "John", "Katy", "Perry"]
+                return ["Aldous Huxley", "George Orwell", "Ray Bradbury", "Ernest Hemingway"]
             case .popCulture:
-                return ["Pragnavi", "John", "Katy", "Perry"]
+                return ["Lover", "Reputation", "Folklore", "1989"]
         }
     }
     
     var correctAnswer: String {
         switch self {
             case .history:
-                return "Pragnavi"
+                return "George Washington"
             case .science:
-                return "Perry"
+                return "Diamond"
             case .literature:
-                return "Katy"
+                return "George Orwell"
             case .popCulture:
-                return "John"
+                return "Folklore"
         }
     }
 }

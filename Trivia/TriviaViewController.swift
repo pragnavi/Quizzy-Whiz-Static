@@ -11,11 +11,15 @@ class TriviaViewController: UIViewController {
 
     private var triviaQuestions = [TriviaData]()
     private var selectedtriviaQuestion = 0
-    private var correctAnswers = 0
+    private var correctAnswersCount = 0
+    private var selectedOption = ""
+    private var correctAnswer = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         addGradient()
+        questionLabel.numberOfLines = 0
+        questionLabel.lineBreakMode = .byWordWrapping
         triviaQuestions = createMockData()
         configure(with: triviaQuestions[selectedtriviaQuestion])
     }
@@ -69,25 +73,65 @@ class TriviaViewController: UIViewController {
     
   
     @IBAction func didTapOption1(_ sender: UIButton) {
+        evaluateAnswer(selectedOptionIndex: 0)
+        proceedToNextQuestionOrShowResults()
         selectedtriviaQuestion = min(triviaQuestions.count - 1, selectedtriviaQuestion + 1)
         configure(with: triviaQuestions[selectedtriviaQuestion])
     }
     
     
     @IBAction func didTapOption2(_ sender: UIButton) {
+        evaluateAnswer(selectedOptionIndex: 1)
+        proceedToNextQuestionOrShowResults()
         selectedtriviaQuestion = min(triviaQuestions.count - 1, selectedtriviaQuestion + 1)
         configure(with: triviaQuestions[selectedtriviaQuestion])
     }
     
     
     @IBAction func didTapOption3(_ sender: UIButton) {
+        evaluateAnswer(selectedOptionIndex: 2)
+        proceedToNextQuestionOrShowResults()
         selectedtriviaQuestion = min(triviaQuestions.count - 1, selectedtriviaQuestion + 1)
         configure(with: triviaQuestions[selectedtriviaQuestion])
     }
     
 
     @IBAction func didTapOption4(_ sender: UIButton) {
+        evaluateAnswer(selectedOptionIndex: 3)
+        proceedToNextQuestionOrShowResults()
         selectedtriviaQuestion = min(triviaQuestions.count - 1, selectedtriviaQuestion + 1)
+        configure(with: triviaQuestions[selectedtriviaQuestion])
+    }
+    
+    private func evaluateAnswer(selectedOptionIndex: Int) {
+        selectedOption = triviaQuestions[selectedtriviaQuestion].TriviaCategory.options[selectedOptionIndex]
+        correctAnswer = triviaQuestions[selectedtriviaQuestion].TriviaCategory.correctAnswer
+        if selectedOption == correctAnswer {
+            correctAnswersCount += 1
+        }
+    }
+    
+    private func proceedToNextQuestionOrShowResults() {
+        if selectedtriviaQuestion+1 < triviaQuestions.count {
+            configure(with: triviaQuestions[selectedtriviaQuestion])
+        } else {
+            showResults()
+        }
+    }
+
+    
+    private func showResults() {
+        let alertController = UIAlertController(title: "Quiz Finished", message: "You got \(correctAnswersCount) out of \(triviaQuestions.count) correct.", preferredStyle: .alert)
+        let restartAction = UIAlertAction(title: "Restart", style: .default) { [weak self] _ in
+            self?.restartQuiz()
+        }
+        alertController.addAction(restartAction)
+        present(alertController, animated: true)
+    }
+
+    private func restartQuiz() {
+        correctAnswersCount = 0
+        selectedtriviaQuestion = 0
         configure(with: triviaQuestions[selectedtriviaQuestion])
     }
     
