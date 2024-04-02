@@ -1,30 +1,28 @@
-# Project 3 - *Quizzy Whiz*
+# Quizzy Whiz: A Trivia Challenge App
 
-Submitted by: **Pragnavi Ravuluri Sai Durga**
+## Introduction
 
 **Quizzy Whiz** is an app that brings the thrill of trivia right to your fingertips! Engage in a brain-tingling journey across various domains including History, Science, Literature, and Pop Culture. With each tap, uncover questions designed to challenge your knowledge and provoke curiosity. Whether you're a trivia novice or a seasoned quiz master, Quizzy Whiz offers a unique platform to test your wits, and learn interesting facts. Dive into the world of Quizzy Whiz, where every question is an opportunity to learn something new and celebrate the joy of discovery.
 
-Time spent: **8** hours spent in total
 
-## Required Features
+## Features
 
-The following **required** functionality is completed:
+The following features are implemented:
 
 - [x] User can view the current question and 4 different answers
 - [x] User can view the next question after tapping an answer
 - [x] User can answer at least 3 different questions
-
-
-The following **optional** features are implemented:
-
 - [x] User can use the vertical orientation of the app on any device
 - [x] User can track the question they are on and how many questions are left
 - [x] User can see how many questions they got correct after answering all questions
 - [x] User should be able to restart the game after they've finished answering all questions
 
-The following **additional** features are implemented:
+## Getting Started
 
-- [ ] List anything else that you can get done to improve the app functionality!
+To get started with Quizzy Whiz:
+1. Clone the repository to your local machine.
+2. Open the `Trivia.xcodeproj` file in Xcode.
+3. Build and run the project on your iOS device or simulator.
 
 ## Video Walkthrough
 
@@ -47,8 +45,6 @@ The following **additional** features are implemented:
   </div>
   
 ## Notes
-
-Describe any challenges encountered while building the app.
 
 Building Quizzy Whiz presented a few key challenges, particularly in ensuring UI responsiveness across various devices, managing the trivia data effectively, and creating an intuitive user interaction flow. Addressing UI responsiveness involved leveraging AutoLayout and Stack Views for a flexible layout. For data management, structured data models and enums were used to organize trivia content efficiently. Enhancing user interaction required implementing logic to handle answer selection and feedback dynamically. Overcoming these challenges was crucial to delivering a seamless and engaging trivia experience in Quizzy Whiz.
 
